@@ -1,0 +1,5 @@
+package com.jsp.student.dao;
+
+public class StudentDao {
+
+}

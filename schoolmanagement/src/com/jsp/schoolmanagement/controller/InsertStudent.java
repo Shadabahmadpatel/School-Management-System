@@ -1,0 +1,31 @@
+package com.jsp.schoolmanagement.controller;
+
+import java.sql.SQLException;
+
+import com.jsp.schoolmanagement.dao.StudentDao;
+import com.jsp.schoolmanagement.dto.Student;
+
+public class InsertStudent {
+	public static void main(String[] args) {
+		Student s1=new Student();
+		s1.setId(9);
+		s1.setName("aftab");
+		s1.setEmail("pqr@gmail.com");
+		
+		StudentDao studentDao=new StudentDao();
+		Student student=studentDao.saveStudent(s1);
+		if(student !=null) {
+			System.out.println("Student data inserted");
+			
+		}else {
+			System.out.println("student data not inserted");
+			
+		}
+		
+		
+		
+		
+	}
+
+
+}

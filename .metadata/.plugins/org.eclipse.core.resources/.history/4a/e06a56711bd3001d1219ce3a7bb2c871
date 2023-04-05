@@ -1,0 +1,18 @@
+package com.jsp.schoolmanagement.controller;
+
+import com.jsp.schoolmanagement.dao.StudentDao;
+import com.jsp.schoolmanagement.dto.Student;
+
+public class RealAllStudent {
+	public static void main(String[] args) {
+		Student s3=new Student();
+		s3.setId(1);
+		
+		StudentDao studentDao=new StudentDao();
+		  Student student=studentDao.readAll(s3);
+		 // System.out.println(student);
+		  
+		  
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.jsp.schoolmanagement.controller;
+
+import com.jsp.schoolmanagement.dao.StudentDao;
+import com.jsp.schoolmanagement.dao.TeacherDao;
+import com.jsp.schoolmanagement.dto.Student;
+import com.jsp.schoolmanagement.dto.Teacher;
+
+public class ReadAllTeacher {
+	public static void main(String[] args) {
+		Teacher t3=new Teacher();
+		t3.setId(3);
+		
+	TeacherDao teacherDao=new TeacherDao();
+		 //Teacher teacher=teacherDao.readAll(t3);
+		// System.out.println(teacher);
+		  teacherDao.readAll(t3);
+		  
+		  
+	}
+
+}

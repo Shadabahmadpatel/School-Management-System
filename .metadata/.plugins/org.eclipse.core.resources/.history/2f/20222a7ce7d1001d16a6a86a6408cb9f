@@ -1,0 +1,9 @@
+package com.jsp.studen.controller;
+
+public class StudentController {
+	public static void main(String[] args) {
+		Student s1=new student();
+		
+	}
+
+}

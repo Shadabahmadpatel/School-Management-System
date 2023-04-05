@@ -1,0 +1,32 @@
+package com.jsp.schoolmanagement.controller;
+
+import com.jsp.schoolmanagement.dao.StudentDao;
+import com.jsp.schoolmanagement.dao.TeacherDao;
+import com.jsp.schoolmanagement.dto.Student;
+import com.jsp.schoolmanagement.dto.Teacher;
+
+public class UpdateTeacher {
+	public static void main(String[] args) {
+		 Teacher t2=new Teacher();
+		 t2.setId(3);
+		 t2.setName("prof.mueez");
+		 //by passing below argument and changing the implementation 
+		 //in teacherdao class you change email as well as update any data 
+		 //in your table and according to your need 
+		// s2.setEmail("xyz");
+		 
+		 
+		
+		 TeacherDao teacherDao=new TeacherDao();
+		 Teacher teacher=teacherDao.updateTeacher(t2);
+		 if(teacher!=null) {
+			 System.out.println("teacher data updated");
+		 }
+		 else { 
+			 System.out.println("teacher data failed to update");
+		 }
+		 
+		
+	}
+
+}

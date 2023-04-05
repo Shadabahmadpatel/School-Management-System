@@ -1,0 +1,29 @@
+package com.jsp.student.controller;
+
+import com.jsp.schoolmanagement.dto.Student;
+import com.jsp.student.dao.StudentDao;
+
+public class StudentController {
+	public static void main(String[] args) {
+		Student s1=new Student();
+		s1.setId(3);
+		s1.setName("aftab");
+		s1.setEmail("pqr@gmail.com");
+		
+		StudentDao studentDao=new StudentDao();
+		Student student=studentDao.saveStudent(s1);
+		if(student !=null) {
+			System.out.println("Student data upadted");
+			
+		}else {
+			System.out.println("student data not updtaed");
+			
+		}
+		
+		
+		
+		
+	}
+
+
+}

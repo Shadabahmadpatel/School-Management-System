@@ -1,0 +1,23 @@
+package com.jsp.schoolmanagement.controller;
+
+import com.jsp.schoolmanagement.dao.StudentDao;
+import com.jsp.schoolmanagement.dto.Student;
+
+public class UpdateStudent {
+ public static void main(String[] args) {
+	 Student s2=new Student();
+	 s2.setId(1);
+	 s2.setName("mueez");
+	
+	 StudentDao studentDao=new StudentDao();
+	Student student=studentDao.updateStudent(s2);
+	 if(student!=null) {
+		 System.out.println("student data updated");
+	 }
+	 else { 
+		 System.out.println("studnet data failed to update");
+	 }
+	 
+	
+}
+}

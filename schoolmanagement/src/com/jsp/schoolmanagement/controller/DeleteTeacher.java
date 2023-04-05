@@ -1,0 +1,17 @@
+package com.jsp.schoolmanagement.controller;
+
+import com.jsp.schoolmanagement.dao.TeacherDao;
+
+public class DeleteTeacher {
+	public static void main(String[] args) {
+		TeacherDao teacherDao=new TeacherDao();
+		 boolean i=teacherDao.deleteTeacher(1);
+		 if(i==true) {
+			 System.out.println("teacher data deleted");
+		 }else {
+			 System.out.println("failed to delete data");
+			 
+		 }
+	}
+
+}

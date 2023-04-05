@@ -1,0 +1,52 @@
+package com.jsp.schoolmanagement.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import com.jsp.schoolmanagement.dto.Student;
+import com.jsp.schoolmanagement.dto.Teacher;
+import com.jsp.schoolmanagement.util.HelperClass;
+
+public class TeacherDao {
+	HelperClass helperClass=new HelperClass();
+	public Teacher saveTeacher(Teacher teacher) {
+		Connection connection=helperClass.getconnection();
+		String sql="INSERT INTO teacher VALUES(?,?,?);";
+		try {
+			PreparedStatement preparedStatement=connection.prepareStatement(sql);
+			preparedStatement.setInt(1,teacher.getId());
+			preparedStatement.setString(2,teacher.getName());
+			preparedStatement.setString(3,teacher.getSubject());
+			
+			preparedStatement.execute();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return teacher;
+		
+}
+	
+	public Teacher updateTeacher(Teacher teacher) {
+		Connection connection=helperClass.getconnection();
+		String sql="UPDATE teacher SET name=?  WHERE ID=?";
+
+		try {
+			PreparedStatement preparedStatement=connection.prepareStatement(sql);
+			// in the same way you can update the other columns also 
+			//preparedStatement.setString(1, student.getEmail());
+		      preparedStatement.setString(1, teacher.getName());
+		      preparedStatement.setInt(2,teacher.getId());
+
+			preparedStatement.execute();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+				return teacher;
+			}
+
+}

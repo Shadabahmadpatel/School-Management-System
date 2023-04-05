@@ -1,0 +1,28 @@
+package com.jsp.studen.controller;
+
+import com.jsp.student.dao.StudentDao;
+import com.jsp.student.dto.Student;
+
+public class StudentController {
+	public static void main(String[] args) {
+		Student s1=new Student();
+		s1.setId(1);
+		s1.setName("Shadab");
+		s1.setEmail("abc@gmail.com");
+		
+		StudentDao studentDao=new StudentDao();
+		Student student=studentDao.saveStudent(s1);
+		if(student !=null) {
+			System.out.println("Student deleted");
+			
+		}else {
+			System.out.println("student not deleted");
+			
+		}
+		
+		
+		
+		
+	}
+
+}

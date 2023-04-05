@@ -1,0 +1,27 @@
+package com.jsp.schoolmanagement.controller;
+
+import com.jsp.schoolmanagement.dao.StudentDao;
+import com.jsp.schoolmanagement.dto.Student;
+
+public class DeleteStudent {
+public static void main(String[] args) {
+	Student s3=new Student();
+	s3.setId(1);
+	
+	StudentDao studentDao=new StudentDao();
+	      Student student=studentDao.deleteStudent(s3);
+	      if(student==null) {
+	    	  System.out.println("student data deleted");
+	    	  
+	      }else {
+	    	  System.out.println("student data not deleted");
+	    	  
+	      }
+	      
+	      
+	     
+	    	  
+	
+
+}
+}

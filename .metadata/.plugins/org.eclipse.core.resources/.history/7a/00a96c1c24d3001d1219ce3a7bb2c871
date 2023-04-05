@@ -1,0 +1,5 @@
+package com.jsp.schoolmanagement.dto;
+
+public class Teacher {
+
+}

@@ -1,0 +1,5 @@
+package com.jsp.schoolmanagement.controller;
+
+public class DeleteTeacher {
+
+}
